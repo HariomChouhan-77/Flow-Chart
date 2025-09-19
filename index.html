@@ -67,14 +67,14 @@
           <p class="lead">Interactive, responsive flowchart for the case study you provided</p>
         </div>
       </div>
-      <div style="color:var(--muted);font-size:13px">48k rows • Kaggle • Predict traffic volume</div>
+      <div style="color:var(--muted);font-size:13px">9k rows • Kaggle • Predict traffic volume</div>
     </header>
 
     <div class="canvas" id="canvas">
       <svg class="svg-layer" id="connectors" aria-hidden="true"></svg>
       <div class="flowgrid" id="grid">
         <div class="node start" data-id="start"><div class="badge">1</div><h3>Start</h3><p>Kick off the pipeline</p></div>
-        <div class="node" data-id="collect"><div class="badge">2</div><h3>Collect Traffic Dataset</h3><p>48,000 records from Kaggle</p></div>
+        <div class="node" data-id="collect"><div class="badge">2</div><h3>Collect Traffic Dataset</h3><p>9000 records from Kaggle</p></div>
         <div class="node" data-id="clean"><div class="badge">3</div><h3>Data Cleaning</h3><p>Handle missing values & format datetime</p></div>
         <div class="node feature" data-id="feat"><div class="badge">4</div><h3>Feature Engineering</h3><p>hour, day-of-week, temperature/weather</p></div>
         <div class="node train" data-id="train"><div class="badge">5</div><h3>Model Training</h3><p>Use ML to predict traffic volume</p></div>
@@ -176,7 +176,7 @@
     function getDetail(id){
       switch(id){
         case 'start': return {title:'Start', body:'Initialize the pipeline and set objectives.'};
-        case 'collect': return {title:'Collect Dataset', body:'Load the 48k-record dataset from Kaggle (datetime, temp, volume, weather).'};
+        case 'collect': return {title:'Collect Dataset', body:'Load the 9k-record dataset from Kaggle (datetime, temp, volume, weather).'};
         case 'clean': return {title:'Data Cleaning', body:'Impute missing values, convert datetime to proper tz-aware objects.'};
         case 'feat': return {title:'Feature Engineering', body:'Extract hour, day-of-week, encode weather, create lag features.'};
         case 'train': return {title:'Model Training', body:'Try trees (XGBoost/LightGBM), or neural nets. Cross-validate by time-window.'};
